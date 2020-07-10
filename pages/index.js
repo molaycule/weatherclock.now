@@ -8,7 +8,24 @@ export default function Home() {
   const [show, setShow] = useState(false);
   const [nickname, setNickname] = React.useState('');
 
+  const successfulLookup = (position) => {
+    const { latitude, longitude } = position.coords;
+    fetch(
+      `https://www.metaweather.com/api/location/search/?lattlong=${latitude},${longitude}`
+    )
+      .then((res) => res.json())
+      .then(console.log);
+  };
+
   useEffect(() => {
+    // get user location
+    if (window.navigator.geolocation) {
+      // Geolocation available
+      window.navigator.geolocation.getCurrentPosition(
+        successfulLookup,
+        console.log
+      );
+    }
     // set show modal
     const _n = localStorage.getItem('_n');
     if (!_n) {
