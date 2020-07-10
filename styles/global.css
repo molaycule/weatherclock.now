@@ -10,3 +10,11 @@ body {
 * {
   box-sizing: border-box;
 }
+
+.info {
+  background-image: url(/svg/info.svg);
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
