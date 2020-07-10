@@ -73,7 +73,9 @@ export default function Home() {
               dark: true,
               opacity: true,
             }}>
-            <Text textAlign='center'>{`${greeting}, ${nickname}`}</Text>
+            <Text textAlign='center'>{`${greeting}${
+              nickname === '' ? '' : ','
+            } ${nickname}`}</Text>
             <Clock type='digital' size='xxlarge' />
           </Box>
           <Footer
