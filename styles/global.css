@@ -11,6 +11,11 @@ body {
   box-sizing: border-box;
 }
 
+.full {
+  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
+}
+
 .icon {
   width: 24px;
   height: 24px;

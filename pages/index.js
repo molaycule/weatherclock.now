@@ -56,6 +56,11 @@ export default function Home() {
   };
 
   useEffect(() => {
+    // resize listener
+    window.addEventListener('resize', () => {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
     // get user location
     if (window.navigator.geolocation) {
       // Geolocation available
@@ -107,10 +112,10 @@ export default function Home() {
 
       <main>
         <Box
+          className='full'
           align='center'
           animation='fadeIn'
           justify='center'
-          height='100vh'
           background={{
             color: 'dark-1',
             dark: true,
@@ -120,10 +125,10 @@ export default function Home() {
             image: `url(${imageUrl})`,
           }}>
           <Box
+            className='full'
             align='center'
             animation='fadeIn'
             justify='center'
-            height='100vh'
             width='100vw'
             background={{
               color: 'dark-1',
