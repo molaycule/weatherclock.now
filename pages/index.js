@@ -91,7 +91,7 @@ export default function Home() {
         ).then((res) => setImageUrl(res.url));
       };
       fetchImage();
-      const interval = setInterval(() => fetchImage(), [20000]);
+      const interval = setInterval(() => fetchImage(), [15000]);
       return () => clearInterval(interval);
     }
   }, [greeting]);
