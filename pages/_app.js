@@ -9,11 +9,16 @@ const theme = {
       height: '20px',
     },
   },
+  anchor: {
+    hover: {
+      textDecoration: 'none',
+    },
+  },
 };
 
 export default function App({ Component, pageProps }) {
   return (
-    <Grommet>
+    <Grommet theme={theme}>
       <Component {...pageProps} />
     </Grommet>
   );

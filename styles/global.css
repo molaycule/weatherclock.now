@@ -11,10 +11,57 @@ body {
   box-sizing: border-box;
 }
 
-.info {
-  background-image: url(/svg/info.svg);
+.icon {
   width: 24px;
   height: 24px;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.icon-sm {
+  width: 18px;
+  height: 18px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.info {
+  background-image: url(/svg/info.svg);
+}
+
+.location {
+  background-image: url(/svg/map-pin.svg);
+}
+
+.weather,
+.location {
+  margin-right: 5px;
+}
+
+.weather-cloud {
+  background-image: url(/svg/cloud.svg);
+}
+
+.weather-drizzle {
+  background-image: url(/svg/cloud-drizzle.svg);
+}
+
+.weather-lightning {
+  background-image: url(/svg/cloud-lightning.svg);
+}
+
+.weather-rain {
+  background-image: url(/svg/cloud-rain.svg);
+}
+
+.weather-snow {
+  background-image: url(/svg/cloud-snow.svg);
+}
+
+.weather-sun {
+  background-image: url(/svg/sun.svg);
+}
+
+.weather-wind {
+  background-image: url(/svg/wind.svg);
 }
