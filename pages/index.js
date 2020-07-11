@@ -100,6 +100,8 @@ export default function Home() {
     <div className='container'>
       <Head>
         <title>Weather Clock Now</title>
+        <meta name='title' content='Weather Clock Now' />
+        <meta name='description' content='a simple clock and weather web app' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
