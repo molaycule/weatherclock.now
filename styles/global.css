@@ -30,6 +30,14 @@ body {
   background-size: cover;
 }
 
+.logo {
+  width: 160px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(/svg/weather_clock_now.svg);
+}
+
 .info {
   background-image: url(/svg/info.svg);
 }

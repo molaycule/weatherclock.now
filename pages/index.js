@@ -7,7 +7,7 @@ import {
   Text,
   TextInput,
   Button,
-  Footer,
+  Header,
   Anchor,
 } from 'grommet';
 
@@ -124,6 +124,17 @@ export default function Home() {
             size: 'cover',
             image: `url(${imageUrl})`,
           }}>
+          <Header
+            background={{
+              color: 'dark-1',
+              dark: true,
+              opacity: true,
+            }}
+            width='100vw'
+            pad='medium'>
+            <Box className='logo'></Box>
+            <Box className='icon info' onClick={() => setShowInfo(true)}></Box>
+          </Header>
           <Box
             className='full'
             align='center'
@@ -175,16 +186,6 @@ export default function Home() {
               </>
             )}
           </Box>
-          <Footer
-            background={{
-              color: 'dark-1',
-              dark: true,
-              opacity: true,
-            }}
-            width='100vw'
-            pad='medium'>
-            <Box className='icon info' onClick={() => setShowInfo(true)}></Box>
-          </Footer>
         </Box>
         {showNickname && (
           <Layer
