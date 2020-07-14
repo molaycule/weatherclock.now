@@ -104,13 +104,6 @@ export default function Home() {
 
   return (
     <div className='container'>
-      <Head>
-        <title>Weather Clock Now</title>
-        <meta name='title' content='Weather Clock Now' />
-        <meta name='description' content='a simple clock and weather web app' />
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
-
       <main>
         <Box
           className='full'
@@ -194,9 +187,12 @@ export default function Home() {
             onEsc={() => setShowNickname(false)}
             onClickOutside={() => setShowNickname(false)}>
             <Box pad='medium' width='268px'>
-              <Text margin={{ bottom: 'xsmall' }}>Enter your nickname</Text>
+              <label htmlFor='nickname'>
+                <Text margin={{ bottom: 'xsmall' }}>Enter your nickname</Text>
+              </label>
               <Box margin={{ bottom: 'medium' }}>
                 <TextInput
+                  id='nickname'
                   placeholder='Nickname'
                   value={nickname}
                   onChange={(event) => setNickname(event.target.value)}
