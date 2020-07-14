@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
+import { version } from '../package.json';
 import {
   Box,
   Layer,
@@ -32,6 +33,8 @@ export default function Home() {
   const [location, setLocation] = useState('');
   const [weather, setWeather] = useState('');
   const [weatherCode, setWeatherCode] = useState('');
+
+  console.log(version);
 
   const successfulLookup = (position) => {
     const { latitude: lat, longitude: long } = position.coords;
@@ -227,7 +230,15 @@ export default function Home() {
                 }}
               />
               <Text size='xsmall' margin={{ bottom: 'xsmall' }}>
-                Author <Anchor label='Mohammed Agboola' />
+                Version <Anchor label={version} />
+              </Text>
+              <Text size='xsmall' margin={{ bottom: 'xsmall' }}>
+                Author{' '}
+                <Anchor
+                  target='_blank'
+                  href='//github.com/moodele'
+                  label='Mohammed Agboola'
+                />
               </Text>
               <Text size='xsmall' margin={{ bottom: 'xsmall' }}>
                 Images from{' '}
