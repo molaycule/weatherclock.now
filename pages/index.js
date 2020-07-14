@@ -34,8 +34,6 @@ export default function Home() {
   const [weather, setWeather] = useState('');
   const [weatherCode, setWeatherCode] = useState('');
 
-  console.log(version);
-
   const successfulLookup = (position) => {
     const { latitude: lat, longitude: long } = position.coords;
     fetch(`/api/weather?lat=${lat}&long=${long}`)
